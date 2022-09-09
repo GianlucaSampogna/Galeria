@@ -1,5 +1,6 @@
 package sampogna.gianluca.galeria;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,7 +46,9 @@ public class MainAdapter extends RecyclerView.Adapter {
                 mainActivity.startPhotoActivity(photos.get(position));
             }
         });
-    }
+        }
+
+
 
 
     @Override

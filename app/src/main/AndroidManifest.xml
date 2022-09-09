@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="sampogna.gianluca.galeria">
 
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,7 +18,7 @@
         tools:targetApi="31">
 
         <provider
-            android:authorities="trindade.daniel.galeria.fileprovider"
+            android:authorities="sampogna.gianluca.galeria.fileprovider"
             android:name="androidx.core.content.FileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
@@ -27,6 +30,7 @@
 
 
         <activity android:name=".PhotoActivity"
+            android:exported="false"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
